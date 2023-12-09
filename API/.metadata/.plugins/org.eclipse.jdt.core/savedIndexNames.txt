@@ -48,6 +48,7 @@ INDEX VERSION 1.134+C:\Users\Yago\Documents\Projeto API\API\.metadata\.plugins\o
 2800140901.index
 20771820.index
 3976793855.index
+1865797976.index
 35160978.index
 403728480.index
 321816039.index
@@ -69,7 +70,6 @@ INDEX VERSION 1.134+C:\Users\Yago\Documents\Projeto API\API\.metadata\.plugins\o
 3711101664.index
 754214155.index
 2770962150.index
-1685859473.index
 3163732115.index
 3924408595.index
 3048082225.index
