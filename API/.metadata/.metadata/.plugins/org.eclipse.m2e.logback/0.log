@@ -1,0 +1,7 @@
+2023-12-08 23:14:34,846 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-12-08 23:15:06,331 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-12-08 23:17:03,289 [Worker-15: Installing artifact] INFO  o.e.m.c.i.embedder.EclipseLogger - Installing C:\Users\Yago\Documents\Projeto Api\API\mvnw.cmd to C:\Users\Yago\.m2\repository\com\example\API\0.0.1-SNAPSHOT\API-0.0.1-SNAPSHOT-sources.cmd
+2023-12-08 23:17:03,309 [Worker-15: Installing artifact] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to close spy org.eclipse.m2e.internal.maven.listener.M2EMavenBuildDataBridge: Cannot invoke "java.nio.channels.SocketChannel.close()" because "this.writeChannel" is null
+2023-12-08 23:20:35,869 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-12-08 23:21:08,343 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-12-08 23:24:20,981 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
