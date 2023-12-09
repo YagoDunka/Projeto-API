@@ -1,0 +1,6 @@
+1702125916185	Encapsulate field 'titulo'
+1702125921962	Encapsulate field 'nota'
+1702126252245	Rename type 'Filmes'
+1702128450977	Rename type 'Classificacao'
+1702128504309	Encapsulate field 'classificacao'
+1702128523144	Encapsulate field 'nome'

@@ -1,0 +1,87 @@
+package com.example.API.controllers;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.API.entities.Classificacao;
+import com.example.API.entities.Filme;
+import com.example.API.repositories.ClassificacaoRepository;
+ 
+@RestController
+public class ClassificacaoController {
+	
+	@Autowired
+	ClasssificacaoRepository repo;
+	
+	@GetMapping("/classificacao")
+	public ResponseEntity<List<Classificacao>> buscarClassificacao() {
+		return ResponseEntity.status(HttpStatus.OK).body(repo.findAll());
+	}
+	
+	@GetMapping("/classificacao/{idClassificacao}")
+	public ResponseEntity<Classificacao> buscarClassificacaos(@PathVariable("idClassificacao") long id) {
+		Optional<Classificacao> opt = repo.findById(id);
+		try {
+			Classificacao cat = opt.get();
+			return ResponseEntity.status(HttpStatus.OK).body(cat);
+		}catch(Exception e) {
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+		}	
+	}
+	
+	@DeleteMapping("/classificacao/{idClassificacao}")
+	public ResponseEntity<Boolean> ExcluirClassificacao(@PathVariable("idClassificacao") long id) {
+		Optional<Classificacao> opt = repo.findById(id);
+		try {
+			Classificacao cat = opt.get();
+			repo.delete(cat);
+			return ResponseEntity.status(HttpStatus.OK).body(true);
+		}catch(Exception e) {
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(false);	
+		}
+	}
+	
+	@PostMapping("/classificacao")
+	public ResponseEntity<Classificacao> salverClassificacao(@RequestBody Classificacao classificacao) {
+		return ResponseEntity.status(HttpStatus.CREATED).body(repo.save(classificacao));
+	}
+	
+	@PutMapping("/classificacao/{idClassificacao}")
+	public ResponseEntity<Classificacao> editarClassificacao(@PathVariable("idClassificacao") long id, @RequestBody Classificacao categori) {
+		Optional<Classificacao> opt = repo.findById(id);
+		try {
+			Classificacao classificacao = opt.get();
+			classificacao.setNome(categori.getDescricao());
+			classificacao.setStatus(categori.getStatus());
+			return ResponseEntity.status(HttpStatus.OK).body(classificacao);
+		}catch(Exception e) {
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);	
+		}
+	}
+	
+	@PatchMapping("/classificacao/{idClassificacao}")
+	public ResponseEntity<Classificacao> desativarClassificacao(@PathVariable("idClassificacao") long id, @RequestBody Classificacao categori) {
+		Optional<Classificacao> opt = repo.findById(id);
+		try {
+			Classificacao classificacao = opt.get();
+			classificacao.setStatus(categori.getStatus());
+			return ResponseEntity.status(HttpStatus.OK).body(classificacao);
+		}catch(Exception e) {
+			return ResponseEntity.status(HttpStatus.CREATED).body(null);
+		}
+		
+		
+	}
+}
