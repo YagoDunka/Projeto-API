@@ -1,24 +1,25 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Filme() {
     const [titulo, setTitulo] = useState('')
     const [nota, setNota] = useState('')
     const [descricao, setDescricao] = useState('')
+    const navigate = useNavigate();
 
     function salvar() {
-        let prod = {titulo, nota, descricao}
+        let film = {titulo, nota, descricao}
         fetch('http://localhost:8080/filmes',
             {
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(prod)
-            }
-        )
+                body: JSON.stringify(film)
+            }).then(() => navigate('/filme/consultar'))
     }
 
     return (
-        <div className="container">
+        <div className="container mt-4">
             <h1 className="text-center mt-4">Novo Filme</h1>
             <label className="form-label">Informe o Titulo</label>
             <input

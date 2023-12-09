@@ -20,12 +20,12 @@ export default function EditaFilme() {
     },[]);
 
     function salvar() {
-        let film = {id: idFilme, titulo, nota, descricao, genero}
+        let film = {id: idFilme, titulo, nota, descricao}
         fetch(`http://localhost:8080/filmes/${idFilme}`,
             {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(prod)
+                body: JSON.stringify(film)
             }
         )
         .then(x => navigate('/'))

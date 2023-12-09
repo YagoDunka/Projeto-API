@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import { createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Filme from './componentes/filme';
-import CardFilme from './componentes/cardFilme';
+import EditaFilme from './componentes/editaFilme';
 import Consulta from './componentes/consulta';
  
  
@@ -13,7 +13,8 @@ const rotas = createBrowserRouter([
     element: <App />,
     children:[
       { path:'/filme/cadastrar', element: <Filme />},
-      { path:'/filme/consultar', element: <Consulta />}
+      { path:'/filme/consultar', element: <Consulta />},
+      { path:'/editar/filme/:idFilme', element: <EditaFilme />}
     ]
   }  
 ])

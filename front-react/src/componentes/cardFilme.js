@@ -16,18 +16,16 @@ export default function CardFilme({ filme }) {
     }
  
     return (
-        <div className="card col-sm-3 m-3 p-3">
+        <div className="card col-sm-3 m-3 p-3 shadow-sm">
             <h3 className="text-center">Filme: {filme.titulo}</h3>
             <hr />
             <p><b>Título:</b> {filme.titulo}</p>
             <p><b>Descrição:</b> {filme.descricao}</p>
             <p><b>Nota:</b> {filme.nota}</p>
             <div className="d-flex justify-content-between">
-                <Link to={`/editar/filme/${filme.id}`}><button className="btn btn-primary">Editar</button></Link>
-                <button
-                    className="btn btn-danger"
-                    onClick={excluir}
-                >Excluir</button>
+                <Link to={`/editar/filme/${filme.id}`}>
+                <button className="btn btn-primary">Editar</button></Link>
+                <button className="btn btn-danger" onClick={excluir} >Excluir</button>
             </div>
         </div>
     );
