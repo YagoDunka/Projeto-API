@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "79c474ed-b560-478c-949d-f102aacd7b04",
+		"name": "WEB 2.0",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29285909"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/filmes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/produtos"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/filmes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"descricao\": \"milho\",\r\n    \"valorUnitario\": \"10.55\",\r\n    \"estoque\": \"10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/produtos"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/filmes/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/produtos/1"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/filmes/1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/produtos/1"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/filmes/1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"descricao\": \" de pipoca\",\r\n    \"valorUnitario\": 10.56,\r\n    \"stoque\": 0.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/produtos/1"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/genero",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/categoria"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/genero",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"teste\",\r\n    \"status\": \"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/categoria"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/genero",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/categoria"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/genero/1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"teste2\",\r\n    \"status\": \"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/categoria/1"
+			},
+			"response": []
+		}
+	]
+}
