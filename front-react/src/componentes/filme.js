@@ -47,7 +47,7 @@ export default function Filme() {
                 onChange={(txt) => setNota(txt.target.value)}
             />
             <button
-                className="btn btn-primary mt-2"
+                className="btn btn-outline-primary mt-2"
                 onClick={salvar}
             >Gravar</button>
         </div>

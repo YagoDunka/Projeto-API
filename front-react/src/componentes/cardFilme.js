@@ -24,8 +24,8 @@ export default function CardFilme({ filme }) {
             <p><b>Nota:</b> {filme.nota}</p>
             <div className="d-flex justify-content-between">
                 <Link to={`/editar/filme/${filme.id}`}>
-                <button className="btn btn-primary">Editar</button></Link>
-                <button className="btn btn-danger" onClick={excluir} >Excluir</button>
+                <button className="btn btn-outline-success">Editar</button></Link>
+                <button className="btn btn-outline-danger" onClick={excluir} >Excluir</button>
             </div>
         </div>
     );

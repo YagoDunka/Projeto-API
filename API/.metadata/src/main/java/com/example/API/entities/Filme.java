@@ -16,9 +16,6 @@ public class Filme {
 	private double nota;
 	private String descricao;
 	
-	@ManyToOne
-	private Genero genero;
-	
 	public Long getId() {
 		return id;
 	}
@@ -49,11 +46,4 @@ public class Filme {
 	public void setNota(double nota) {
 		this.nota = nota;
 	}	
-	
-	public Genero genero() {
-		return genero;
-	}
-	public void setGenero(Genero genero) {
-		this.genero = genero;
-	}
 }
