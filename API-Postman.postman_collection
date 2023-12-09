@@ -97,7 +97,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/genero",
+			"name": "http://localhost:8080/genero/1",
 			"request": {
 				"method": "GET",
 				"header": [],
