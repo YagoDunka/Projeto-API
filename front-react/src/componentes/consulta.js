@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import CardFilme from "./cardFilme"
-
+ 
 export default function Consulta(){
     const[filmes, setFilmes] = useState([])
     function consultar(){
@@ -8,9 +8,9 @@ export default function Consulta(){
         .then(data => data.json())
         .then(response => setFilmes(response))
     }
-
+ 
     useEffect( ()=>{consultar()},[])
-
+ 
     return(
         <div className="d-flex flex-wrap  ">
             {

@@ -21,7 +21,7 @@ export default function EditaFilme() {
 
     function salvar() {
         let film = {id: idFilme, titulo, nota, descricao, genero}
-        fetch(`http://localhost:8080/produtos/${idProduto}`,
+        fetch(`http://localhost:8080/filmes/${idFilme}`,
             {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
@@ -34,31 +34,31 @@ export default function EditaFilme() {
 
     return (
         <div className="container">
-            <h1 className="text-center mt-4">Editar ID: { idProduto } </h1>
-            <label className="form-label">Informe descrição</label>
+            <h1 className="text-center mt-4">Novo Filme</h1>
+            <label className="form-label">Informe o Titulo</label>
             <input
                 className="form-control"
                 type="text"
-                placeholder="informe descrição"
+                placeholder="Nome do Filme"
+                value={titulo}
+                onChange={(txt) => setTitulo(txt.target.value)}
+            />
+            <label className="form-label">Informe a Descricao</label>
+            <input
+                className="form-control"
+                type="text"
+                placeholder="Informe a Descricao"
                 value={descricao}
                 onChange={(txt) => setDescricao(txt.target.value)}
             />
-            <label className="form-label">Informe valor</label>
-            <input
-                className="form-control"
-                type="text"
-                placeholder="informe valor"
-                value={valorUnitario}
-                onChange={(txt) => setvalorUnitario(txt.target.value)}
-            />
 
-            <label className="form-label">Informe estoque</label>
+            <label className="form-label">Informe a Nota</label>
             <input
                 className="form-control"
                 type="text"
-                placeholder="informe estoque"
-                value={estoque}
-                onChange={(txt) => setEstoque(txt.target.value)}
+                placeholder="Nota do Filme"
+                value={nota}
+                onChange={(txt) => setNota(txt.target.value)}
             />
             <button
                 className="btn btn-primary mt-2"
